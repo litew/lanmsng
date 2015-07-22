@@ -29,7 +29,7 @@
 #include "messagelog.h"
 #include "history.h"
 
-lmcMainWindow::lmcMainWindow(QWidget *parent, Qt::WFlags flags) : QWidget(parent, flags) {
+lmcMainWindow::lmcMainWindow(QWidget *parent, Qt::WindowFlags flags) : QWidget(parent, flags) {
 	ui.setupUi(this);
 
 	connect(ui.tvUserList, SIGNAL(itemActivated(QTreeWidgetItem*, int)), 

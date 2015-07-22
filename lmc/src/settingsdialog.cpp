@@ -29,7 +29,7 @@
 #include <QMessageBox>
 #include "settingsdialog.h"
 
-lmcSettingsDialog::lmcSettingsDialog(QWidget *parent, Qt::WFlags flags) : QDialog(parent, flags) {
+lmcSettingsDialog::lmcSettingsDialog(QWidget *parent, Qt::WindowFlags flags) : QDialog(parent, flags) {
 	ui.setupUi(this);
 	//	remove the help button from window button group
 	setWindowFlags(windowFlags() & ~Qt::WindowContextHelpButtonHint);
