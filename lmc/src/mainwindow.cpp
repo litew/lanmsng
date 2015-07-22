@@ -54,6 +54,10 @@ lmcMainWindow::~lmcMainWindow(void) {
 
 void lmcMainWindow::init(User* pLocalUser, QList<Group>* pGroupList, bool connected) {
 	setWindowIcon(QIcon(IDR_APPICON));
+    setWindowFlags(windowFlags() & Qt::FramelessWindowHint);
+    setWindowFlags(windowFlags() & ~Qt::WindowMaximizeButtonHint);
+    setMinimumSize(270, 260);
+    setMaximumSize(300, 760);
 
 	this->pLocalUser = pLocalUser;
 
