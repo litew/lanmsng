@@ -405,7 +405,7 @@ void lmcSettingsDialog::setUIText(void) {
 		ui.grpAlerts->setEnabled(false);
 		ui.grpAlerts->setTitle(tr("Status Alerts (Not Available)"));
 	}
-    if(!QSound::isAvailable()) {
+    if(!QAudioDeviceInfo::availableDevices(QAudio::AudioOutput).isEmpty()) {
 		ui.grpSounds->setEnabled(false);
 		ui.grpSounds->setTitle(tr("Sounds (Not Available)"));
 	}
