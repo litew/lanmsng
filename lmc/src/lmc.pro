@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui network xml webkit
+QT       += core gui network xml webkit webkitwidgets widgets multimedia
 
 win32: TARGET = lmc
 unix: TARGET = lan-messenger
