@@ -112,6 +112,15 @@ QString Helper::getOSName(void) {
 	case QSysInfo::WV_WINDOWS7:
 		osName = "Windows 7";
 		break;
+    case QSysInfo::WV_WINDOWS8:
+        osName = "Windows 8";
+        break;
+    case QSysInfo::WV_WINDOWS8_1:
+        osName = "Windows 8.1";
+        break;
+    case QSysInfo::WV_WINDOWS10:
+        osName = "Windows 10";
+        break;
     default:
         osName = "Windows";
         break;
@@ -142,12 +151,24 @@ QString Helper::getOSName(void) {
 	case QSysInfo::MV_LION:
 		osName = "Mac OS X 10.7";
 		break;
+    case QSysInfo::MV_MOUNTAINLION:
+        osName = "Mac OS X 10.8";
+        break;
+    case QSysInfo::MV_MAVERICKS:
+        osName = "Mac OS X 10.9";
+        break;
+    case QSysInfo::MV_YOSEMITE:
+        osName = "Mac OS X 10.10";
+        break;
+    case QSysInfo::MV_ELCAPITAN:
+        osName = "Mac OS X 10.11";
+        break;
     default:
         osName = "Mac OS X";
         break;
     }
 #elif defined Q_OS_LINUX
-	osName = "Linux/X11";
+    osName = QSysInfo::prettyProductName();
 #endif
 
 	return osName;
