@@ -142,6 +142,7 @@ CONFIG(debug, debug|release) {
 win32: CONFIG(release, debug|release): LIBS += -L$$PWD/../../lmcapp/lib/ -llmcapp2
 else:win32: CONFIG(debug, debug|release): LIBS += -L$$PWD/../../lmcapp/lib/ -llmcappd2
 unix:!symbian: LIBS += -L$$PWD/../../lmcapp/lib/ -llmcapp
+unix:!mac:DEFINES += HAVE_X11
 
 INCLUDEPATH += $$PWD/../../lmcapp/include
 DEPENDPATH += $$PWD/../../lmcapp/include
