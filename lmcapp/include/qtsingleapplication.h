@@ -45,11 +45,11 @@
 ****************************************************************************/
 
 
-#include <QtGui/QApplication>
+#include <QtWidgets/QApplication>
 
 class QtLocalPeer;
 
-#if defined(Q_WS_WIN)
+#if defined(Q_OS_WIN)
 #  if !defined(QT_QTSINGLEAPPLICATION_EXPORT) && !defined(QT_QTSINGLEAPPLICATION_IMPORT)
 #    define QT_QTSINGLEAPPLICATION_EXPORT
 #  elif defined(QT_QTSINGLEAPPLICATION_IMPORT)

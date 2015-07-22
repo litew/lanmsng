@@ -45,7 +45,7 @@
 ****************************************************************************/
 
 
-#include <QtWidgets/QApplication>
+#include <QtWidgetsQApplication>
 
 class QtLocalPeer;
 
