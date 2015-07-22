@@ -25,7 +25,7 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include <QtGui/QWidget>
+#include <QtWidgets/QWidget>
 #include <QSystemTrayIcon>
 #include <QMenuBar>
 #include <QMenu>

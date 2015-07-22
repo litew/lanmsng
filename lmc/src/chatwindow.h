@@ -25,7 +25,7 @@
 #ifndef CHATWINDOW_H
 #define CHATWINDOW_H
 
-#include <QtGui/QWidget>
+#include <QtWidgets>
 #include <QToolBar>
 #include <QToolButton>
 #include <QMenu>

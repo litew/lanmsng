@@ -24,6 +24,9 @@
 
 #include <QDir>
 #include <QFileInfo>
+#include <QStringRef>
+#include <QTextStream>
+#include <QDataStream>
 #include "trace.h"
 #include "netstreamer.h"
 

@@ -27,7 +27,7 @@
 
 #include <QDir>
 #include <QFileInfo>
-#include <QDesktopServices>
+#include <QStandardPaths>
 #include <QDateTime>
 #include "settings.h"
 

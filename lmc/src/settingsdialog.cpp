@@ -24,6 +24,7 @@
 
 #include <QUrl>
 #include <QSound>
+#include <QAudioDeviceInfo>
 #include <QSystemTrayIcon>
 #include <QLocale>
 #include <QMessageBox>

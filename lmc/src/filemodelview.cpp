@@ -22,7 +22,7 @@
 ****************************************************************************/
 
 
-#include <QtGui>
+#include <QtWidgets>
 #include <QPixmap>
 #include <QFileInfo>
 #include <math.h>

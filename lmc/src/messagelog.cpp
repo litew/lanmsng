@@ -24,6 +24,7 @@
 
 #include <QMenu>
 #include <QAction>
+#include <QDesktopServices>
 #include "messagelog.h"
 
 const QString acceptOp("accept");
