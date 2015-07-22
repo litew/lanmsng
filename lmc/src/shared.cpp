@@ -79,7 +79,7 @@ QString Helper::getLogonName(void) {
 	char* szUserName;
 	szUserName = getenv("USER");
 	if(szUserName)
-		return QString::fromAscii(szUserName);
+        return QString::fromLatin1(szUserName);
 #endif
 
 	return QString::null;
