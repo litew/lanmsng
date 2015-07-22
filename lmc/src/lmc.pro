@@ -153,3 +153,6 @@ INCLUDEPATH += $$PWD/../../openssl/include
 DEPENDPATH += $$PWD/../../openssl/include
 
 win32:LIBS += -liphlpapi
+
+RESOURCES += \
+    resource.qrc
