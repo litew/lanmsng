@@ -425,7 +425,7 @@ void lmcSettingsDialog::setUIText(void) {
 
 	cboTheme_currentIndexChanged(ui.cboTheme->currentIndex());
 
-#ifdef Q_WS_MAC
+#ifdef Q_OS_MAC
 	ui.rdbEnter->setText("Return");
 	ui.rdbCmdEnter->setText(QString(QChar(0x2318)) + " + Return"); // U+2318 is the hex code for Bowen Knot symbol
 #else
@@ -439,7 +439,7 @@ void lmcSettingsDialog::setUIText(void) {
 
 void lmcSettingsDialog::loadSettings(void) {
     //	Auto start function not implemented on Mac since Mac itself provides an easy UI for it
-#ifdef Q_WS_MAC
+#ifdef Q_OS_MAC
 	ui.chkAutoStart->setChecked(false);
     ui.chkAutoStart->hide();
 #else

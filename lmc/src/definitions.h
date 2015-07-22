@@ -27,7 +27,7 @@
 
 //	Information about the application
 #define IDA_TITLE		"LAN Messenger"
-#ifdef Q_WS_WIN
+#ifdef Q_OS_WIN
 #define IDA_PRODUCT		"LAN Messenger"
 #define IDA_COMPANY		"LAN Messenger"
 #else
@@ -42,11 +42,11 @@
 #define IDA_CONTACT		"qualiatech@gmail.com"
 #define IDA_DOMAIN		"http://lanmsngr.sourceforge.net"
 
-#if defined Q_WS_WIN
+#if defined Q_OS_WIN
 #define IDA_PLATFORM	"Windows"
-#elif defined Q_WS_MAC
+#elif defined Q_OS_MAC
 #define IDA_PLATFORM	"Macintosh"
-#elif defined Q_WS_X11
+#elif defined Q_OS_LINUX
 #define IDA_PLATFORM	"Linux"
 #endif
 
