@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui network xml webkit webkitwidgets widgets multimedia
+QT       += core gui network xml webkitwidgets widgets multimedia
 
 win32: TARGET = lmc
 unix: TARGET = lan-messenger
@@ -146,7 +146,7 @@ unix:!symbian: LIBS += -L$$PWD/../../lmcapp/lib/ -llmcapp
 INCLUDEPATH += $$PWD/../../lmcapp/include
 DEPENDPATH += $$PWD/../../lmcapp/include
 
-win32: LIBS += -L$$PWD/../../openssl/lib/ -leay32
+win32: LIBS += -L$$PWD/../../openssl/lib/ -llibeay32
 unix:!symbian: LIBS += -L$$PWD/../../openssl/lib/ -lcrypto
 
 INCLUDEPATH += $$PWD/../../openssl/include
