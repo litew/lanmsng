@@ -37,10 +37,10 @@ mkdir %1\imageformats
 :plug_exists
 if "%2" == "release" goto release_mode
 echo %2
-xcopy %QTDIR%\plugins\imageformats\qgifd4.dll %1\imageformats /I /F /Y
-xcopy %QTDIR%\plugins\imageformats\qicod4.dll %1\imageformats /I /F /Y
-xcopy %QTDIR%\plugins\imageformats\qjpegd4.dll %1\imageformats /I /F /Y
-xcopy %QTDIR%\plugins\imageformats\qtiffd4.dll %1\imageformats /I /F /Y
+xcopy %QTDIR%\plugins\imageformats\qgifd.dll %1\imageformats /I /F /Y
+xcopy %QTDIR%\plugins\imageformats\qicod.dll %1\imageformats /I /F /Y
+xcopy %QTDIR%\plugins\imageformats\qjpegd.dll %1\imageformats /I /F /Y
+xcopy %QTDIR%\plugins\imageformats\qtiffd.dll %1\imageformats /I /F /Y
 
 echo Copying libraries
 copy /Y ..\..\lmcapp\bin\lmcappd2.dll %1\lmcappd2.dll
@@ -48,10 +48,10 @@ copy /Y ..\..\openssl\bin\libeay32.dll %1\libeay32.dll
 goto end
 
 :release_mode
-xcopy %QTDIR%\plugins\imageformats\qgif4.dll %1\imageformats /I /F /Y
-xcopy %QTDIR%\plugins\imageformats\qico4.dll %1\imageformats /I /F /Y
-xcopy %QTDIR%\plugins\imageformats\qjpeg4.dll %1\imageformats /I /F /Y
-xcopy %QTDIR%\plugins\imageformats\qtiff4.dll %1\imageformats /I /F /Y
+xcopy %QTDIR%\plugins\imageformats\qgif.dll %1\imageformats /I /F /Y
+xcopy %QTDIR%\plugins\imageformats\qico.dll %1\imageformats /I /F /Y
+xcopy %QTDIR%\plugins\imageformats\qjpeg.dll %1\imageformats /I /F /Y
+xcopy %QTDIR%\plugins\imageformats\qtiff.dll %1\imageformats /I /F /Y
 
 echo Copying libraries
 copy /Y ..\..\lmcapp\bin\lmcapp2.dll %1\lmcapp2.dll
