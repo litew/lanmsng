@@ -232,8 +232,7 @@
     <message>
         <location filename="settingsdialog.ui" line="1364"/>
         <source>&lt;- Add</source>
-        <translation>&lt;- Добавить
-</translation>
+        <translation>&lt;- Добавить</translation>
     </message>
     <message>
         <location filename="settingsdialog.ui" line="1391"/>
@@ -253,7 +252,7 @@
     <message>
         <location filename="settingsdialog.ui" line="1789"/>
         <source>Chat Theme</source>
-        <translation>Тема чата</translation>
+        <translation>Тема оформления чата</translation>
     </message>
     <message>
         <location filename="settingsdialog.ui" line="1849"/>
@@ -290,7 +289,7 @@
     <message>
         <location filename="settingsdialog.ui" line="2041"/>
         <source>Reset Preferences</source>
-        <translation>Сбросить Настройки</translation>
+        <translation>По умолчанию</translation>
     </message>
     <message>
         <location filename="settingsdialog.ui" line="2061"/>
@@ -327,7 +326,7 @@
     <message>
         <location filename="settingsdialog.ui" line="161"/>
         <source>Show main window when %1 starts</source>
-        <translation>Показать главное окно %1 после запуска системы</translation>
+        <translation>Показать окно приложения %1 после запуска</translation>
     </message>
     <message>
         <location filename="settingsdialog.ui" line="171"/>
@@ -352,7 +351,7 @@
     <message>
         <location filename="settingsdialog.ui" line="198"/>
         <source>Show balloon notifications in tray</source>
-        <translation>Показывать всплывающие сообщения в области уведомлений</translation>
+        <translation>Показывать уведомления</translation>
     </message>
     <message>
         <location filename="settingsdialog.ui" line="215"/>
@@ -362,7 +361,7 @@
     <message>
         <location filename="settingsdialog.ui" line="223"/>
         <source>Select language:</source>
-        <translation>Выбрать язык:</translation>
+        <translation>Выбрать язык интерфейса:</translation>
     </message>
     <message>
         <location filename="settingsdialog.ui" line="64"/>
@@ -393,7 +392,7 @@
     <message>
         <location filename="settingsdialog.ui" line="419"/>
         <source>About:</source>
-        <translation>О себе:</translation>
+        <translation>Подпись:</translation>
     </message>
     <message>
         <location filename="settingsdialog.ui" line="447"/>
@@ -430,22 +429,22 @@
     <message>
         <location filename="settingsdialog.ui" line="612"/>
         <source>Add time stamp to instant messages</source>
-        <translation>Добавлять временную отметку в мгновенных сообщениях</translation>
+        <translation>Отображать отметку времени в мгновенных сообщениях</translation>
     </message>
     <message>
         <location filename="settingsdialog.ui" line="637"/>
         <source>Show date in time stamp</source>
-        <translation>Показывать дату во временной отметке</translation>
+        <translation>Добавлять дату к отметке времени</translation>
     </message>
     <message>
         <location filename="settingsdialog.ui" line="548"/>
         <source>Set incoming messages foreground</source>
-        <translation>Показывать входящие сообщения на переднем плане</translation>
+        <translation>Выводить входящие сообщения на передний план</translation>
     </message>
     <message>
         <location filename="settingsdialog.ui" line="555"/>
         <source>Minimize incoming messages to taskbar</source>
-        <translation>Минимизировать входящие сообщения в панель задач</translation>
+        <translation>Выводить входящие сообщения свернутыми на панель задач</translation>
     </message>
     <message>
         <location filename="settingsdialog.ui" line="697"/>
@@ -473,7 +472,7 @@
         <location filename="settingsdialog.ui" line="580"/>
         <source>Apply to public messages</source>
         <oldsource>Apply  to public messages</oldsource>
-        <translation>Применять к общедоступным сообщениям</translation>
+        <translation>Применять к сообщениям общего чата</translation>
     </message>
     <message>
         <location filename="settingsdialog.ui" line="646"/>
@@ -493,7 +492,7 @@
     <message>
         <location filename="settingsdialog.ui" line="687"/>
         <source>Clear messages when window is closed</source>
-        <translation>Очищать окно сообщений после закрытия окна</translation>
+        <translation>Очищать диалог после закрытия окна сообщения</translation>
     </message>
     <message>
         <location filename="settingsdialog.ui" line="705"/>
@@ -957,7 +956,7 @@
     <message>
         <location filename="chatroomwindow.cpp" line="623"/>
         <source>Get &amp;Information</source>
-        <translation>Получить &amp;информацию</translation>
+        <translation>&amp;Информация о контакте</translation>
     </message>
     <message>
         <location filename="chatroomwindow.cpp" line="624"/>
@@ -1840,7 +1839,7 @@ LAN Messenger работает по существу во всех популя�
     <message>
         <location filename="userinfowindow.cpp" line="77"/>
         <source>User Information</source>
-        <translation>Информация пользователя</translation>
+        <translation>Информация о контакте</translation>
     </message>
 </context>
 <context>
