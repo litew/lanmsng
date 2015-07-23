@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="ru_UA">
+<TS version="2.1" language="ru_UA">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -31,7 +31,7 @@
     <message>
         <location filename="aboutdialog.ui" line="107"/>
         <source>Thanks</source>
-        <translation>Благодарность</translation>
+        <translation>Благодарности</translation>
     </message>
     <message>
         <location filename="aboutdialog.ui" line="136"/>
@@ -493,7 +493,7 @@
     <message>
         <location filename="settingsdialog.ui" line="687"/>
         <source>Clear messages when window is closed</source>
-        <translation type="unfinished"></translation>
+        <translation>Очищать окно сообщений после закрытия окна</translation>
     </message>
     <message>
         <location filename="settingsdialog.ui" line="705"/>
@@ -1032,12 +1032,12 @@
     <message>
         <location filename="chatwindow.cpp" line="531"/>
         <source>Send A &amp;File...</source>
-        <translation>Отправить &amp;Файл...</translation>
+        <translation>Отправить &amp;файл...</translation>
     </message>
     <message>
         <location filename="chatwindow.cpp" line="532"/>
         <source>Send A Fol&amp;der...</source>
-        <translation type="unfinished"></translation>
+        <translation>Отправить &amp;директорию</translation>
     </message>
     <message>
         <location filename="chatwindow.cpp" line="533"/>
@@ -1057,12 +1057,12 @@
     <message>
         <location filename="chatwindow.cpp" line="537"/>
         <source>Send a file to %1</source>
-        <translation>Отправить файл %1</translation>
+        <translation>Отправить файл контакту %1</translation>
     </message>
     <message>
         <location filename="chatwindow.cpp" line="539"/>
         <source>Send a folder to %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Отправить директорию контакту %1</translation>
     </message>
     <message>
         <location filename="chatwindow.cpp" line="542"/>
@@ -1137,7 +1137,7 @@
     <message>
         <location filename="chatwindow.cpp" line="227"/>
         <source>%1 sends a folder...</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 посылает директорию</translation>
     </message>
     <message>
         <location filename="chatwindow.cpp" line="658"/>
@@ -1172,7 +1172,9 @@
         <source>Preferences could not be imported from &apos;%1&apos;.
 
 File may not exist, or may not be compatible with this version of %2.</source>
-        <translation type="unfinished"></translation>
+        <translation>Не удалось выполнить импорт настроек из %1.
+
+Файл не существует или несовместим с этой версией %2.</translation>
     </message>
     <message>
         <location filename="lmc.cpp" line="156"/>
@@ -1393,12 +1395,12 @@ File may not exist, or may not be compatible with this version of %2.</source>
         <location filename="mainwindow.cpp" line="869"/>
         <location filename="mainwindow.cpp" line="874"/>
         <source>Send &amp;File</source>
-        <translation>Отправить &amp;Файл</translation>
+        <translation>Отправить &amp;файл</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="870"/>
         <source>Send Fol&amp;der</source>
-        <translation type="unfinished"></translation>
+        <translation>Отправить &amp;директорию</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="871"/>
@@ -1451,7 +1453,7 @@ File may not exist, or may not be compatible with this version of %2.</source>
     <message>
         <location filename="messagelog.cpp" line="632"/>
         <source>%1 is sending you a folder:</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 посылает вам директорию:</translation>
     </message>
     <message>
         <location filename="messagelog.cpp" line="639"/>
@@ -1494,7 +1496,7 @@ File may not exist, or may not be compatible with this version of %2.</source>
     <message>
         <location filename="messagelog.cpp" line="641"/>
         <source>%1 sends you a folder:</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 посылает вам директорию:</translation>
     </message>
     <message>
         <location filename="messagelog.cpp" line="717"/>
