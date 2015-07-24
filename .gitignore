@@ -37,3 +37,4 @@ Makefile*
 /lmc/release
 /openssl
 /release
+/lmc/src/buildwin32.bat

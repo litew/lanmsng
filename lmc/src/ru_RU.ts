@@ -673,12 +673,12 @@
     <message>
         <location filename="settingsdialog.ui" line="1648"/>
         <source>Bring window to foreground</source>
-        <translation>Переместить окно на передний план</translation>
+        <translation>Вывести окно на передний план</translation>
     </message>
     <message>
         <location filename="settingsdialog.ui" line="1675"/>
         <source>Minimize window to taskbar</source>
-        <translation>Минимизировать окно в панель задач</translation>
+        <translation>Свернуть окно на панели задач</translation>
     </message>
     <message>
         <location filename="settingsdialog.ui" line="1616"/>
@@ -698,7 +698,7 @@
     <message>
         <location filename="settingsdialog.ui" line="1719"/>
         <source>View Files</source>
-        <translation>Показывать файлы</translation>
+        <translation>Показать файлы</translation>
     </message>
 </context>
 <context>
@@ -1013,7 +1013,7 @@
     <message>
         <location filename="chatroomwindow.cpp" line="728"/>
         <source>Conversation</source>
-        <translation>Конференция</translation>
+        <translation>конференция</translation>
     </message>
     <message>
         <location filename="chatroomwindow.cpp" line="730"/>
@@ -1323,7 +1323,7 @@ File may not exist, or may not be compatible with this version of %2.</source>
         <location filename="mainwindow.cpp" line="848"/>
         <location filename="mainwindow.cpp" line="860"/>
         <source>File &amp;Transfers</source>
-        <translation>&amp;Переданные файлы</translation>
+        <translation>&amp;Файлы</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="849"/>
