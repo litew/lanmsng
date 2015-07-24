@@ -916,7 +916,7 @@
     <message>
         <location filename="chatroomwindow.cpp" line="165"/>
         <source>Group Conversation</source>
-        <translation>Беседа группы</translation>
+        <translation>Конференция</translation>
     </message>
     <message>
         <location filename="chatroomwindow.cpp" line="300"/>
@@ -946,12 +946,12 @@
     <message>
         <location filename="chatroomwindow.cpp" line="621"/>
         <source>&amp;Conversation</source>
-        <translation>&amp;Беседа</translation>
+        <translation>&amp;Начать разговор</translation>
     </message>
     <message>
         <location filename="chatroomwindow.cpp" line="622"/>
         <source>Send &amp;File</source>
-        <translation>Отправить &amp;Файл</translation>
+        <translation>Отправить &amp;файл</translation>
     </message>
     <message>
         <location filename="chatroomwindow.cpp" line="623"/>
@@ -1013,7 +1013,7 @@
     <message>
         <location filename="chatroomwindow.cpp" line="728"/>
         <source>Conversation</source>
-        <translation>Беседа</translation>
+        <translation>Конференция</translation>
     </message>
     <message>
         <location filename="chatroomwindow.cpp" line="730"/>
@@ -1076,7 +1076,7 @@
     <message>
         <location filename="chatwindow.cpp" line="544"/>
         <source>View File Transfers</source>
-        <translation>Просмотр передачи файлов</translation>
+        <translation>Просмотр переданных файлов</translation>
     </message>
     <message>
         <location filename="chatwindow.cpp" line="545"/>
@@ -1116,7 +1116,7 @@
     <message>
         <location filename="chatwindow.cpp" line="152"/>
         <source>Group Conversation</source>
-        <translation>Переговоры группы</translation>
+        <translation>Конференция</translation>
     </message>
     <message>
         <location filename="chatwindow.cpp" line="174"/>
@@ -1161,7 +1161,7 @@
     <message>
         <location filename="chatwindow.cpp" line="693"/>
         <source>Conversation</source>
-        <translation>Беседа</translation>
+        <translation>разговор</translation>
     </message>
 </context>
 <context>
@@ -1262,7 +1262,7 @@ File may not exist, or may not be compatible with this version of %2.</source>
     <message>
         <location filename="mainwindow.cpp" line="564"/>
         <source>Enter a name for the group</source>
-        <translation>Введите имя для группы</translation>
+        <translation>Введите имя  группы</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="570"/>
@@ -1278,7 +1278,7 @@ File may not exist, or may not be compatible with this version of %2.</source>
     <message>
         <location filename="mainwindow.cpp" line="597"/>
         <source>Enter a new name for the group</source>
-        <translation>Введите новое имя для группы</translation>
+        <translation>Введите новое имя группы</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="841"/>
@@ -1289,7 +1289,7 @@ File may not exist, or may not be compatible with this version of %2.</source>
         <location filename="mainwindow.cpp" line="842"/>
         <location filename="mainwindow.cpp" line="876"/>
         <source>&amp;New Chat Room</source>
-        <translation>&amp;Новая дискуссионная группа</translation>
+        <translation>&amp;Новая конференция</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="844"/>
@@ -1323,7 +1323,7 @@ File may not exist, or may not be compatible with this version of %2.</source>
         <location filename="mainwindow.cpp" line="848"/>
         <location filename="mainwindow.cpp" line="860"/>
         <source>File &amp;Transfers</source>
-        <translation>&amp;Передача файлов</translation>
+        <translation>&amp;Переданные файлы</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="849"/>
@@ -1382,7 +1382,7 @@ File may not exist, or may not be compatible with this version of %2.</source>
         <location filename="mainwindow.cpp" line="867"/>
         <location filename="mainwindow.cpp" line="873"/>
         <source>&amp;Conversation</source>
-        <translation>&amp;Беседа</translation>
+        <translation>&amp;Начать разговор</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="868"/>
@@ -1447,7 +1447,7 @@ File may not exist, or may not be compatible with this version of %2.</source>
     <message>
         <location filename="messagelog.cpp" line="630"/>
         <source>%1 is sending you a file:</source>
-        <translation>%1 отправляет Вам файл:</translation>
+        <translation>%1 отправляет вам файл:</translation>
     </message>
     <message>
         <location filename="messagelog.cpp" line="632"/>
@@ -1515,22 +1515,22 @@ File may not exist, or may not be compatible with this version of %2.</source>
     <message>
         <location filename="messagelog.cpp" line="738"/>
         <source>%1 is typing...</source>
-        <translation>%1 вводит с клавиатуры...</translation>
+        <translation>%1 набирает сообщение...</translation>
     </message>
     <message>
         <location filename="messagelog.cpp" line="741"/>
         <source>%1 has entered text</source>
-        <translation>%1 вставил текст</translation>
+        <translation>%1 ввёл текст</translation>
     </message>
     <message>
         <location filename="messagelog.cpp" line="755"/>
         <source>%1 has joined this conversation</source>
-        <translation>%1 присоединился к этой беседе</translation>
+        <translation>%1 подключился</translation>
     </message>
     <message>
         <location filename="messagelog.cpp" line="758"/>
         <source>%1 has left this conversation</source>
-        <translation>%1 покинул эту беседу</translation>
+        <translation>%1 отключился</translation>
     </message>
     <message>
         <location filename="messagelog.cpp" line="877"/>
