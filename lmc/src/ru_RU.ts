@@ -908,7 +908,7 @@
     <message>
         <location filename="broadcastwindow.cpp" line="362"/>
         <source>You are no longer connected. Broadcast message cannot be sent.</source>
-        <translation>Вы больше не соединены. Широковещательное сообщение не может быть отправлено.</translation>
+        <translation>Нет связи с другими пользователями. Широковещательное сообщение не может быть отправлено.</translation>
     </message>
 </context>
 <context>
@@ -1036,7 +1036,7 @@
     <message>
         <location filename="chatwindow.cpp" line="532"/>
         <source>Send A Fol&amp;der...</source>
-        <translation>Отправить &amp;директорию</translation>
+        <translation>Отправить &amp;директорию...</translation>
     </message>
     <message>
         <location filename="chatwindow.cpp" line="533"/>
@@ -1136,7 +1136,7 @@
     <message>
         <location filename="chatwindow.cpp" line="227"/>
         <source>%1 sends a folder...</source>
-        <translation>%1 посылает директорию</translation>
+        <translation>%1 посылает директорию...</translation>
     </message>
     <message>
         <location filename="chatwindow.cpp" line="658"/>
@@ -1189,7 +1189,7 @@ File may not exist, or may not be compatible with this version of %2.</source>
     <message>
         <location filename="lmc.cpp" line="971"/>
         <source>%1 cannot start because another application is using the port configured for use with %2.</source>
-        <translation>%1 не может запустить потому, что другое приложение использует порт, настроенный для использования с %2.</translation>
+        <translation>%1 не может запуститься из-за того, что другое приложение заняло порт, используемый %2.</translation>
     </message>
     <message>
         <location filename="lmc.cpp" line="143"/>
@@ -1198,7 +1198,7 @@ File may not exist, or may not be compatible with this version of %2.</source>
 %1 is unable to recover your settings.</source>
         <translation>Ваш файл настроек поврежден или неправильный.
 
-%1 не может восстановить Ваши настройки.</translation>
+%1 не может восстановить ваши настройки.</translation>
     </message>
 </context>
 <context>
@@ -1404,7 +1404,7 @@ File may not exist, or may not be compatible with this version of %2.</source>
     <message>
         <location filename="mainwindow.cpp" line="871"/>
         <source>Get &amp;Information</source>
-        <translation>Получить &amp;информацию</translation>
+        <translation>&amp;Информация о контакте</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="872"/>
@@ -1553,7 +1553,7 @@ File may not exist, or may not be compatible with this version of %2.</source>
     <message>
         <location filename="settingsdialog.cpp" line="202"/>
         <source>Select folder</source>
-        <translation>Выбрать папку</translation>
+        <translation>Выбрать директорию</translation>
     </message>
     <message>
         <location filename="settingsdialog.cpp" line="233"/>
@@ -1593,17 +1593,17 @@ File may not exist, or may not be compatible with this version of %2.</source>
     <message>
         <location filename="settingsdialog.cpp" line="401"/>
         <source>System Tray (Not Available)</source>
-        <translation>Область уведомлений (не доступно)</translation>
+        <translation>Область уведомлений (недоступно)</translation>
     </message>
     <message>
         <location filename="settingsdialog.cpp" line="405"/>
         <source>Status Alerts (Not Available)</source>
-        <translation>Статус предупреждений (не доступно)</translation>
+        <translation>Статус предупреждений (недоступно)</translation>
     </message>
     <message>
         <location filename="settingsdialog.cpp" line="409"/>
         <source>Sounds (Not Available)</source>
-        <translation>Звуки (не доступно)</translation>
+        <translation>Звуки (недоступно)</translation>
     </message>
     <message>
         <location filename="settingsdialog.cpp" line="423"/>
