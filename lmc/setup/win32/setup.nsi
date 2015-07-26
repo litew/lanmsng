@@ -93,7 +93,7 @@ SetCompressor /SOLID lzma
   !insertmacro MUI_PAGE_INSTFILES
   !define MUI_FINISHPAGE_TITLE_3LINES
   !define MUI_FINISHPAGE_RUN "$INSTDIR\${AppExec}"
-  !define MUI_FINISHPAGE_RUN_TEXT "Start ${ProductName}"
+  !define MUI_FINISHPAGE_RUN_TEXT "Запустить ${ProductName}"
   !define MUI_PAGE_CUSTOMFUNCTION_SHOW FinishPageShow
   !insertmacro MUI_PAGE_FINISH
 
@@ -104,6 +104,9 @@ SetCompressor /SOLID lzma
   UninstPage custom un.OptionsPageShow un.OptionsPageLeave
   !insertmacro MUI_UNPAGE_INSTFILES
   !insertmacro MUI_UNPAGE_FINISH
+  
+  !insertmacro MUI_LANGUAGE "Russian"
+
 
 
 ;------------------------------------------------------------------------------
@@ -111,8 +114,7 @@ SetCompressor /SOLID lzma
 
   ;Define Uninstall confirmation constant for fetching strings from language file.
   !insertmacro MUI_SET MUI_UNCONFIRMPAGE ""
-  !insertmacro MUI_LANGUAGE "English"
-
+;  !insertmacro MUI_LANGUAGE "English"
 
 ;------------------------------------------------------------------------------
 ;Version Information
@@ -139,30 +141,32 @@ SetCompressor /SOLID lzma
 
 Section
   
-  DetailPrint "Installing ${ProductName}"
+  DetailPrint "Установка ${ProductName}"
   
-  DetailPrint "Copying new files"
+  DetailPrint "Копирование новых файлов"
 
   ;Set output path to the installation directory
   SetOutPath $INSTDIR
   
   ;Copy application files to the installation directory  
-  File "..\..\release\${AppExec}"
-  File "..\..\release\lmc.rcc"
-  File "..\..\release\COPYING.txt"
-  File "..\..\release\*.dll"
+  File "release\${AppExec}"
+  File "release\lmc.rcc"
+  File "release\COPYING.txt"
+  File "release\*.dll"
   CreateDirectory "$INSTDIR\imageformats"
   SetOutPath "$INSTDIR\imageformats"
-  File "..\..\release\imageformats\*.*"
+  File "release\imageformats\*.*"
   CreateDirectory "$INSTDIR\sounds"
   SetOutPath "$INSTDIR\sounds"
-  File /r "..\..\release\sounds\*.*"
+  File /r "release\sounds\*.*"
   CreateDirectory "$INSTDIR\lang"
   SetOutPath "$INSTDIR\lang"
-  File /r "..\..\release\lang\*.*"
+  File /r "release\lang\*.*"
   CreateDirectory "$INSTDIR\themes"
   SetOutPath "$INSTDIR\themes"
-  File /r "..\..\release\themes\*.*"
+  File /r "release\themes\*.*"
+  SetOutPath "${AppDataDir}"
+  File "package\group.cfg"
   
   ;Create directories in user's Application Data folder
   CreateDirectory "${AppDataDir}\cache"
@@ -178,7 +182,7 @@ Section
   WriteUninstaller "$INSTDIR\${Uninstaller}"
 
   ;Write application information into the registry
-  DetailPrint "Creating Registry entries and keys..."
+  DetailPrint "Создание разделов и ключей реестра..."
   WriteRegStr HKLM "${AppRegKey}" "InstallDir" $INSTDIR
   WriteRegStr HKLM "${AppRegKey}" "Version" "${ProductVersion}"
   WriteRegStr HKLM "${AppRegkey}" "FirstRun" "0"
@@ -206,20 +210,27 @@ Section
   WriteRegDWORD HKLM "${UninstKey}" "NoModify" 1
   WriteRegDWORD HKLM "${UninstKey}" "NoRepair" 1  
   
-  DetailPrint "Adding Windows Firewall Exception '${ProductName}'"
+  DetailPrint "Создание конфигурации по умолчанию в директории '$APPDATA\${ProductName}'"
+  CreateDirectory "$APPDATA\${ProductName}"
+  SetOutPath "$APPDATA\${ProductName}"
+  File "package\LAN Messenger.ini"
+  
+  SetOutPath $INSTDIR
+  
+  DetailPrint "Добавление правила исключения в брандмауэр Windows '${ProductName}'"
   nsisFirewall::AddAuthorizedApplication "$INSTDIR\${AppExec}" "${ProductName}"
   Pop $0
 
   ;Create Start menu shortcuts (for all users)
-  DetailPrint "Adding Start menu shortcuts"
+  DetailPrint "Создание ярлыков в меню Пуск"
   SetShellVarContext all
   CreateDirectory "${StartMenuDir}"
   CreateShortCut "${StartMenuDir}\${ProductName}.lnk" "$INSTDIR\${AppExec}" "" "$INSTDIR\${AppExec}" \
     0 SW_SHOWNORMAL "" "Send or receive instant messages."
   ;CreateShortCut "${StartMenuDir}\${ProductName} - Loopback.lnk" "$INSTDIR\${AppExec}" "/loopback" "$INSTDIR\${AppExec}" \
   ;  0 SW_SHOWNORMAL "" "Start ${ProductName} in loopback mode."
-  CreateShortCut "${StartMenuDir}\Uninstall ${ProductName}.lnk" "$INSTDIR\${Uninstaller}" "" "$INSTDIR\${Uninstaller}" \
-    0 SW_SHOWNORMAL "" "Uninstall ${ProductName}"
+  CreateShortCut "${StartMenuDir}\Удаление ${ProductName}.lnk" "$INSTDIR\${Uninstaller}" "" "$INSTDIR\${Uninstaller}" \
+    0 SW_SHOWNORMAL "" "Удалить ${ProductName}"
   SetShellVarContext current
 
 SectionEnd
@@ -230,26 +241,26 @@ SectionEnd
 
 Section "Uninstall"
 
-  DetailPrint "Uninstalling ${ProductName}"
+  DetailPrint "Удаление ${ProductName}"
   
   ;Delete Start menu shortcuts
-  DetailPrint "Removing Start menu shortcuts"
+  DetailPrint "Удаление элементов меню Пуск"
   SetShellVarContext all
   Delete "${StartMenuDir}\*.*"
   RMDir "${StartMenuDir}"
   SetShellVarContext current
   
-  DetailPrint "Removing Windows Firewall Exception '${ProductName}'"
+  DetailPrint "Удаление правила исключения из брандмауэра Windows '${ProductName}'"
   nsisFirewall::RemoveAuthorizedApplication "$INSTDIR\${AppExec}"
   Pop $0
   
   ;Remove registry keys
-  DetailPrint "Deleting registry entries and keys..."
+  DetailPrint "Удаление значений реестра..."
   DeleteRegKey HKLM "${UninstKey}"
   DeleteRegKey HKLM "${AppRegKey}"
   DeleteRegKey /ifempty HKLM "${CompanyRegKey}"
   
-  DetailPrint "Removing files and folders"
+  DetailPrint "Удаление файлов и директорий"
   ;Delete settings and history files if selected by user
   ExecWait "$INSTDIR\${AppExec} $DeleteHistory $DeleteSettings /silent /unsync /quit"
 
@@ -285,7 +296,7 @@ SectionEnd
 
   Function .onInit
   
-    StrCpy $BrandText "${ProductName} v${ProductVersion} Installer"
+    StrCpy $BrandText "Установка ${ProductName} v${ProductVersion}"
     Call IsAlreadyInstalled
     
   FunctionEnd
@@ -299,8 +310,8 @@ SectionEnd
     StrCmp $R0 "" NotInstalled
     ;Ask user whether current installation should be removed or not. If not, abort installation
     MessageBox MB_OKCANCEL|MB_ICONEXCLAMATION \
-      "${ProductName} has already been installed on your computer.$\n$\n\
-      Click OK to remove the previous version and continue this installation or Cancel to quit." \
+      "${ProductName} уже установлена на вашем компьютере.$\n$\n\
+      Нажмите OK для удаления предыдущей версии программы и продолжения этой установки либо нажмите Отмена для выхода." \
       /SD IDOK IDOK Uninst
     Abort
     
@@ -325,7 +336,7 @@ SectionEnd
     
     UninstCancelled:
     ;Abort setup after showing an error message
-    MessageBox MB_OK|MB_ICONSTOP "Uninstallation of the previous version was cancelled.$\n$\nSetup will now exit." /SD IDOK
+    MessageBox MB_OK|MB_ICONSTOP "Удаление предыдущей версии было отменено.$\n$\nУстановщик завершает работу." /SD IDOK
     Abort
     
     NotInstalled:
@@ -335,7 +346,7 @@ SectionEnd
   
   Function un.onInit
   
-    StrCpy $BrandText "${ProductName} v${ProductVersion} Uninstaller"
+    StrCpy $BrandText "Удаление ${ProductName} v${ProductVersion}"
     ;Page callback function will not be called for silent uninstall, so check for App running here
     IfSilent +1 +2
   	Call un.IsAppRunning
@@ -352,8 +363,8 @@ SectionEnd
     IntCmp $0 0 NotRunning
     
     MessageBox MB_OKCANCEL|MB_ICONQUESTION \
-      "${ProductName} must be closed to proceed with the uninstall.$\n$\n\
-      Click OK to close ${ProductName} or Cancel to quit." \
+      "${ProductName} должна быть закрыта для продолжения деинсталляции.$\n$\n\
+      Нажмите OK для закрытия программы ${ProductName} или Отмена для выхода." \
       /SD IDOK IDOK CloseApp
     ;Set exit code to 1 (user cancel) and quit setup.
     SetErrorLevel 1
@@ -387,7 +398,7 @@ SectionEnd
   Function FinishPageShow
   
     IntCmp $R8 0 NotAborted
-    ${NSD_SetText} $mui.FinishPage.Title "${ProductName} was not installed"
+    ${NSD_SetText} $mui.FinishPage.Title "${ProductName} не была установлена"
     ${NSD_SetText} $mui.FinishPage.Text "The wizard was interrupted before ${ProductName} could be completely installed.$\n$\n\
         Your system has not been modified. To install this program at a later time, please run the installation again."
         
@@ -430,24 +441,24 @@ SectionEnd
     !insertmacro MUI_HEADER_TEXT_PAGE $(MUI_UNTEXT_CONFIRM_TITLE) $(MUI_UNTEXT_CONFIRM_SUBTITLE)
     
     ;Add controls to the page
-    ${NSD_CreateLabel} 0 0 100% 12u "${ProductName} will be uninstalled from the following location:"
+    ${NSD_CreateLabel} 0 0 100% 12u "${ProductName} будет удалена из следующей директории:"
     Pop $OptionsPage.DirectoryText
     
     ${NSD_CreateText} 0 13u 100% 12u "$INSTDIR"
     Pop $OptionsPage.Directory
     SendMessage $OptionsPage.Directory ${EM_SETREADONLY} 1 0
     
-    ${NSD_CreateCheckBox} 0 40u 100% 10u "Delete history"
+    ${NSD_CreateCheckBox} 0 40u 100% 10u "Удалить историю"
     Pop $OptionsPage.DeleteHistory
     ;Set checked state based on previous user input
     ${NSD_SetState} $OptionsPage.DeleteHistory $OptionsPage.DeleteHistory_State
     
-    ${NSD_CreateCheckBox} 0 55u 100% 10u "Delete preferences"
+    ${NSD_CreateCheckBox} 0 55u 100% 10u "Удалить настройки"
     Pop $OptionsPage.DeleteSettings
     ;Set checked state based on previous user input
     ${NSD_SetState} $OptionsPage.DeleteSettings $OptionsPage.DeleteSettings_State
     
-    ${NSD_CreateLabel} 0 -13u 100% 12u "Click Uninstall to continue."
+    ${NSD_CreateLabel} 0 -13u 100% 12u "Нажмите Удалить для продолжения."
     Pop $OptionsPage.Text
     
     nsDialogs::Show
