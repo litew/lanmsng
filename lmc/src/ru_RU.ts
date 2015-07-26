@@ -1283,7 +1283,7 @@ File may not exist, or may not be compatible with this version of %2.</source>
     <message>
         <location filename="mainwindow.cpp" line="841"/>
         <source>&amp;Messenger</source>
-        <translation>&amp;Мессенджер</translation>
+        <translation>&amp;Действия</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="842"/>
