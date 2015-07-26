@@ -451,7 +451,7 @@ void lmcSettingsDialog::loadSettings(void) {
 	ui.chkSingleClickTray->setChecked(pSettings->value(IDS_SINGLECLICKTRAY, IDS_SINGLECLICKTRAY_VAL).toBool());
 	ui.chkSysTrayMsg->setChecked(pSettings->value(IDS_SYSTRAYMSG, IDS_SYSTRAYMSG_VAL).toBool());
 	ui.chkAllowSysTrayMin->setChecked(pSettings->value(IDS_ALLOWSYSTRAYMIN, IDS_ALLOWSYSTRAYMIN_VAL).toBool());
-	QString langCode = pSettings->value(IDS_LANGUAGE, IDS_LANGUAGE_VAL).toString();
+	QString langCode = pSettings->value(IDS_LANGUAGE, QLocale::system().name()).toString();
 	for(int index = 0; index < ui.cboLanguage->count(); index ++) {
 		QString code = ui.cboLanguage->itemData(index, Qt::UserRole).toString();
 		if(langCode.compare(code) == 0) {

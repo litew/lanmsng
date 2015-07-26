@@ -94,6 +94,10 @@ int main(int argc, char *argv[]) {
 	application.loadTranslations(StdLocation::sysLangDir());
 	application.loadTranslations(StdLocation::userLangDir());
 
+    QTranslator translator;
+    translator.load(StdLocation::sysLangDir() + "/" + QLocale::system().name());
+    application.installTranslator(&translator);
+
 	//	Enable tracing for Windows and Mac
 #ifndef Q_OS_LINUX
 	messageList += "/trace\n";
